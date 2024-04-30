@@ -1,0 +1,467 @@
+{
+  "compatibilityLevel": 1550,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.128.751.0 (24.04)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"Timeline\",\"Culture\"]"
+      },
+      {
+        "name": "__TEdtr",
+        "value": "1"
+      },
+      {
+        "name": "TranslationsBuilder",
+        "value": "Version:2.2-Updated:2024-04-30"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"DevMode\"]"
+      }
+    ],
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        },
+        "translations": {
+          "model": {
+            "name": "Model",
+            "tables": [
+              {
+                "name": "calendarTable",
+                "columns": [
+                  {
+                    "name": "Quarter",
+                    "translatedCaption": "Quarter"
+                  }
+                ]
+              },
+              {
+                "name": "Timeline",
+                "columns": [
+                  {
+                    "name": "date",
+                    "translatedCaption": "Date"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      {
+        "name": "fr-FR",
+        "translations": {
+          "model": {
+            "name": "Model",
+            "tables": [
+              {
+                "name": "calendarTable",
+                "columns": [
+                  {
+                    "name": "Date",
+                    "translatedCaption": "Date"
+                  },
+                  {
+                    "name": "year",
+                    "translatedCaption": "Année"
+                  },
+                  {
+                    "name": "QuarterNr",
+                    "translatedCaption": "N° Trimestre"
+                  },
+                  {
+                    "name": "Quarter",
+                    "translatedCaption": "Trimestre"
+                  },
+                  {
+                    "name": "QuarterText",
+                    "translatedCaption": "Trimestre text"
+                  },
+                  {
+                    "name": "MonthNr",
+                    "translatedCaption": "Numéro de mois"
+                  },
+                  {
+                    "name": "Month",
+                    "translatedCaption": "Mois"
+                  },
+                  {
+                    "name": "WeekdayNr",
+                    "translatedCaption": "Numéro du jour de la semaine"
+                  },
+                  {
+                    "name": "Weekday",
+                    "translatedCaption": "Jour de la semaine"
+                  }
+                ],
+                "translatedCaption": "Calendrier"
+              },
+              {
+                "name": "Timeline",
+                "columns": [
+                  {
+                    "name": "date",
+                    "translatedCaption": "Date"
+                  },
+                  {
+                    "name": "event",
+                    "translatedCaption": "événement"
+                  }
+                ],
+                "translatedCaption": "Chronologie"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "relationships": [
+      {
+        "name": "c1e3ceff-341a-490a-ba88-0297331a1e3a",
+        "fromColumn": "date",
+        "fromTable": "Timeline",
+        "toColumn": "Date",
+        "toTable": "calendarTable"
+      }
+    ],
+    "sourceQueryCulture": "fr-FR",
+    "tables": [
+      {
+        "name": "calendarTable",
+        "annotations": [
+          {
+            "name": "PBI_Id",
+            "value": "041d2600d3fa46baa8a93df82fe21143"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "General Date",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "421f2c16-8665-40f8-9e85-3701297ca330",
+            "sourceColumn": "[Date]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "year",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "e5f92bc4-e795-4a1f-90a2-3daa0030c423",
+            "sourceColumn": "[year]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "QuarterNr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "f2014977-cf4f-4bde-891e-a8f6e4885f57",
+            "sourceColumn": "[QuarterNr]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Quarter",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "c278d2d1-2855-4102-9ffe-dca1730281aa",
+            "sourceColumn": "[Quarter]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "QuarterText",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "8e1d58a3-cadd-4dc7-a254-0a31d096cb51",
+            "sourceColumn": "[QuarterText]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "MonthNr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "db3e0a13-a16d-4b02-801c-73665a155b62",
+            "sourceColumn": "[MonthNr]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Month",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "9bb0d0d3-b827-4656-8bb1-404eb4a3fbd1",
+            "sortByColumn": "MonthNr",
+            "sourceColumn": "[Month]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "WeekdayNr",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "3153038b-74dd-407a-ae19-a1f189f1c1ad",
+            "sourceColumn": "[WeekdayNr]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          },
+          {
+            "name": "Weekday",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "isDataTypeInferred": true,
+            "isNameInferred": true,
+            "lineageTag": "b85309f7-846c-44ef-b592-d41c8ef9c15f",
+            "sourceColumn": "[Weekday]",
+            "summarizeBy": "none",
+            "type": "calculatedTableColumn"
+          }
+        ],
+        "lineageTag": "4231c8f5-7f6c-445e-99c2-77dce2abba4f",
+        "partitions": [
+          {
+            "name": "calendarTable",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "",
+                "ADDCOLUMNS (",
+                "    CALENDAR ( DATE ( 2000, 04, 08 ), TODAY () ),",
+                "    \"year\", YEAR ( [Date] ),",
+                "    \"QuarterNr\", QUARTER ( [Date] ),",
+                "    \"Quarter\", FORMAT ( [Date], \"\\QQ\" ),",
+                "    \"QuarterText\", \"Qtr\" & QUARTER ( [Date] ),",
+                "    \"MonthNr\", MONTH ( [Date] ),",
+                "    \"Month\", FORMAT ( [Date], \"MMM\" ),",
+                "    \"WeekdayNr\", WEEKDAY ( [Date], 2 ),",
+                "    \"Weekday\", FORMAT ( [Date], \"DDD\" )",
+                ")"
+              ],
+              "type": "calculated"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Timeline",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "date",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              },
+              {
+                "name": "UnderlyingDateTimeDataType",
+                "value": "Date"
+              },
+              {
+                "name": "PBI_FormatHint",
+                "value": "{\"isDateTimeCustom\":true}"
+              }
+            ],
+            "dataType": "dateTime",
+            "formatString": "dd/mm/yyyy",
+            "lineageTag": "db4d38ca-95ee-4f19-9726-4e81a34167d4",
+            "sourceColumn": "date",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "event",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "9d2cafc7-7694-4120-83d0-b4a58e37ca6f",
+            "sourceColumn": "event",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3012a852-12ed-4e74-bc56-12cc80f412d1",
+        "partitions": [
+          {
+            "name": "Timeline",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/nizararena/resume/main/Timeline.csv\"),[Delimiter=\";\", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
+                "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"date\", type date}, {\"event\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Culture",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "lang",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "80899468-14d6-4f83-bf19-b51202037668",
+            "sourceColumn": "lang",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "flag",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataCategory": "ImageUrl",
+            "dataType": "string",
+            "lineageTag": "2e2f8613-ff09-4197-84d3-1e842423fb2c",
+            "sourceColumn": "flag",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "fc18a9bc-df3a-4f5d-9941-27b4d99c4692",
+        "measures": [
+          {
+            "name": "Measure",
+            "expression": "SELECTEDVALUE(Culture[lang])",
+            "lineageTag": "7c2c8c5e-1b2a-4433-9b05-fcd7f8db5a30"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Culture",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"nY0xCsMwDEXv4jmK9h6gB2jpZDIIR3YCjmwsGdPbJ907ZfsPHu9772KD58tNbjOr+kAcY8yhdLH2jZmSXnDgqBCKGIthr7nQqhgbSWD4OVAlQaaWeL6WWybvWODzvlHtshuvoEbGCiUCHdz2QH9/lhM=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [lang = _t, flag = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"lang\", type text}, {\"flag\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
