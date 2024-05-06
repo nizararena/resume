@@ -27,22 +27,40 @@
       "name": "ReportSection",
       "visualContainers": [
         {
-          "config": "{\"name\":\"5987577ea4b65f2952f5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":122.3076923076923,\"y\":350.7692307692308,\"z\":2000,\"width\":246.9230769230769,\"height\":183.07692307692307,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Culture.lang)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Culture\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lang\"}},\"Function\":3},\"Name\":\"Min(Culture.lang)\",\"NativeReferenceName\":\"First lang\"}]},\"drillFilterOtherVisuals\":true}}",
+          "config": "{\"name\":\"5987577ea4b65f2952f5\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1067.8719397363466,\"y\":160.90395480225988,\"z\":1000,\"width\":158.49340866290018,\"height\":84.97175141242937,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Culture.lang)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Culture\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"lang\"}},\"Function\":3},\"Name\":\"Min(Culture.lang)\",\"NativeReferenceName\":\"First lang\"}]},\"drillFilterOtherVisuals\":true}}",
           "filters": "[]",
-          "height": 183.08,
-          "width": 246.92,
-          "x": 122.31,
-          "y": 350.77,
+          "height": 84.97,
+          "width": 158.49,
+          "x": 1067.87,
+          "y": 160.90,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"6d61e63e576b700cec7a\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":224.18079096045196,\"z\":2000,\"width\":687.608286252354,\"height\":427.8719397363465,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"lineChart\",\"projections\":{\"Category\":[{\"queryRef\":\"calendarTable.Date\",\"active\":true}],\"Y\":[{\"queryRef\":\"_measures.event y pos 1\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"calendarTable\",\"Type\":0},{\"Name\":\"_\",\"Entity\":\"_measures\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Date\"},\"Name\":\"calendarTable.Date\",\"NativeReferenceName\":\"Date\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"_\"}},\"Property\":\"event y pos 1\"},\"Name\":\"_measures.event y pos 1\",\"NativeReferenceName\":\"event y pos 1\"}],\"OrderBy\":[{\"Direction\":1,\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"Date\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"lineStyles\":[{\"properties\":{\"showMarker\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"strokeWidth\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"markerShape\":{\"expr\":{\"Literal\":{\"Value\":\"'circle'\"}}}}}],\"dataPoint\":[{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}}}}},\"selector\":{\"metadata\":\"_measures.event y pos 1\"}}],\"labels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"labelPosition\":{\"expr\":{\"Literal\":{\"Value\":\"'Above'\"}}},\"labelDensity\":{\"expr\":{\"Literal\":{\"Value\":\"100L\"}}},\"enableValueDataLabel\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"8D\"}}}}},{\"properties\":{\"dynamicLabelValue\":{\"expr\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"Timeline\"}},\"Property\":\"event\"}},\"Function\":3}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"highlightMatching\":1}}],\"valueAxis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"start\":{\"expr\":{\"Literal\":{\"Value\":\"-2D\"}}},\"end\":{\"expr\":{\"Literal\":{\"Value\":\"11D\"}}}}}],\"categoryAxis\":[{\"properties\":{\"showAxisTitle\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"gridlineShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"axisType\":{\"expr\":{\"Literal\":{\"Value\":\"'Scalar'\"}}}}}],\"y2Axis\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"seriesLabels\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"error\":[{\"properties\":{\"enabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"barColor\":{\"solid\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'#FF0000'\"}}}}},\"barBorderColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}},\"markerShape\":{\"expr\":{\"Literal\":{\"Value\":\"'longDash'\"}}},\"barShow\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}},\"selector\":{\"metadata\":\"_measures.event y pos 1\"}},{\"properties\":{\"errorRange\":{\"kind\":\"ErrorRange\",\"explicit\":{\"isRelative\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"lowerBound\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_measures\"}},\"Property\":\"error_bar_start\"}}},\"upperBound\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"_measures\"}},\"Property\":\"event y pos 1\"}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":0}}],\"metadata\":\"_measures.event y pos 1\",\"highlightMatching\":1}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"visualTooltip\":[{\"properties\":{\"section\":{\"expr\":{\"Literal\":{\"Value\":\"'ReportSection7505af510e6a42ae0d76'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 427.87,
+          "width": 687.61,
+          "x": 0.00,
+          "y": 224.18,
           "z": 2000.00
         },
         {
-          "config": "{\"name\":\"78d2dda46c4c25f89a3f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":447.1563088512241,\"y\":63.879472693032014,\"z\":1000,\"width\":498.3804143126177,\"height\":175.36723163841808,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"Culture.flag\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Culture\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"flag\"},\"Name\":\"Culture.flag\",\"NativeReferenceName\":\"flag\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Culture\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"flag\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'https://www.countryflags.com/wp-content/uploads/france-flag-png-large.png'\"}}]]}}}]}}}}]}}}",
+          "config": "{\"name\":\"6e6de756f4f18f0f41ed\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":68.09792843691149,\"z\":2001,\"width\":632.7683615819209,\"height\":118.71939736346516,\"tabOrder\":2001}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"calendarTable.year\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"calendarTable\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"year\"},\"Name\":\"calendarTable.year\",\"NativeReferenceName\":\"year\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Between'\"}}}}}],\"general\":[{\"properties\":{}}]}}}",
           "filters": "[]",
-          "height": 175.37,
-          "width": 498.38,
-          "x": 447.16,
-          "y": 63.88,
-          "z": 1000.00
+          "height": 118.72,
+          "width": 632.77,
+          "x": 0.00,
+          "y": 68.10,
+          "z": 2001.00
+        },
+        {
+          "config": "{\"name\":\"78d2dda46c4c25f89a3f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":978.0790960451977,\"y\":0,\"z\":0,\"width\":301.92090395480227,\"height\":112.09039548022598,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"advancedSlicerVisual\",\"projections\":{\"Values\":[{\"queryRef\":\"Culture.flag\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Culture\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"flag\"},\"Name\":\"Culture.flag\",\"NativeReferenceName\":\"flag\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"c\",\"Entity\":\"Culture\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"c\"}},\"Property\":\"flag\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'https://www.countryflags.com/wp-content/uploads/france-flag-png-large.png'\"}}]]}}}]}}}}],\"layout\":[{\"properties\":{\"rowCount\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}},\"columnCount\":{\"expr\":{\"Literal\":{\"Value\":\"2L\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 112.09,
+          "width": 301.92,
+          "x": 978.08,
+          "y": 0.00,
+          "z": 0.00
         }
       ],
       "width": 1280.00
@@ -57,6 +75,27 @@
       "ordinal": 2,
       "visualContainers": [],
       "width": 1280.00
+    },
+    {
+      "config": "{\"type\":1}",
+      "displayName": "tooltip_line_chart",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 240.00,
+      "name": "ReportSection7505af510e6a42ae0d76",
+      "ordinal": 3,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"254e6230c3dcab21fe0b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63.8985736925515,\"y\":27.575277337559427,\"z\":0,\"width\":201.96513470681455,\"height\":137.11568938193344,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"card\",\"projections\":{\"Values\":[{\"queryRef\":\"Min(Timeline.event)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"t\",\"Entity\":\"Timeline\",\"Type\":0}],\"Select\":[{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"t\"}},\"Property\":\"event\"}},\"Function\":3},\"Name\":\"Min(Timeline.event)\",\"NativeReferenceName\":\"First event\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 137.12,
+          "width": 201.97,
+          "x": 63.90,
+          "y": 27.58,
+          "z": 0.00
+        }
+      ],
+      "width": 320.00
     },
     {
       "config": "{}",

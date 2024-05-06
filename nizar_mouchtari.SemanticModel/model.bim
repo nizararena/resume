@@ -12,7 +12,7 @@
       },
       {
         "name": "PBI_QueryOrder",
-        "value": "[\"Timeline\",\"Culture\"]"
+        "value": "[\"Timeline\",\"Culture\",\"_measures\"]"
       },
       {
         "name": "__TEdtr",
@@ -338,6 +338,10 @@
           {
             "name": "PBI_ResultType",
             "value": "Table"
+          },
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
           }
         ],
         "columns": [
@@ -375,6 +379,20 @@
             "lineageTag": "9d2cafc7-7694-4120-83d0-b4a58e37ca6f",
             "sourceColumn": "event",
             "summarizeBy": "none"
+          },
+          {
+            "name": "Index",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "9fc6abc5-f4e6-4ea4-a50d-03329792ae70",
+            "sourceColumn": "Index",
+            "summarizeBy": "sum"
           }
         ],
         "lineageTag": "3012a852-12ed-4e74-bc56-12cc80f412d1",
@@ -387,9 +405,10 @@
                 "let",
                 "    Source = Csv.Document(Web.Contents(\"https://raw.githubusercontent.com/nizararena/resume/main/Timeline.csv\"),[Delimiter=\";\", Columns=2, Encoding=65001, QuoteStyle=QuoteStyle.None]),",
                 "    #\"Promoted Headers\" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),",
-                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"date\", type date}, {\"event\", type text}})",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(#\"Promoted Headers\",{{\"date\", type date}, {\"event\", type text}}),",
+                "    #\"Added Index\" = Table.AddIndexColumn(#\"Changed Type\", \"Index\", 1, 1, Int64.Type)",
                 "in",
-                "    #\"Changed Type\""
+                "    #\"Added Index\""
               ],
               "type": "m"
             }
@@ -399,10 +418,6 @@
       {
         "name": "Culture",
         "annotations": [
-          {
-            "name": "PBI_NavigationStepName",
-            "value": "Navigation"
-          },
           {
             "name": "PBI_ResultType",
             "value": "Table"
@@ -454,6 +469,65 @@
                 "let",
                 "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"nY0xCsMwDEXv4jmK9h6gB2jpZDIIR3YCjmwsGdPbJ907ZfsPHu9772KD58tNbjOr+kAcY8yhdLH2jZmSXnDgqBCKGIthr7nQqhgbSWD4OVAlQaaWeL6WWybvWODzvlHtshuvoEbGCiUCHdz2QH9/lhM=\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [lang = _t, flag = _t]),",
                 "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"lang\", type text}, {\"flag\", type text}})",
+                "in",
+                "    #\"Changed Type\""
+              ],
+              "type": "m"
+            }
+          }
+        ]
+      },
+      {
+        "name": "_measures",
+        "annotations": [
+          {
+            "name": "PBI_NavigationStepName",
+            "value": "Navigation"
+          },
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "Column1",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "c3baec8a-d641-44a9-a1b3-a66a75d8cc40",
+            "sourceColumn": "Column1",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "2515ef0c-8d21-44df-8fce-96cd5b0e3bac",
+        "measures": [
+          {
+            "name": "event y pos 1",
+            "expression": "SELECTEDVALUE(Timeline[Index])",
+            "formatString": "0",
+            "lineageTag": "fb58e7aa-c587-49f9-a905-4f76f69fc4a0"
+          },
+          {
+            "name": "error_bar_start",
+            "expression": "-10",
+            "formatString": "0",
+            "lineageTag": "9f0b4a9f-bf59-425b-97ff-9f211c88ea21"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "_measures",
+            "mode": "import",
+            "source": {
+              "expression": [
+                "let",
+                "    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText(\"i44FAA==\", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),",
+                "    #\"Changed Type\" = Table.TransformColumnTypes(Source,{{\"Column1\", type text}})",
                 "in",
                 "    #\"Changed Type\""
               ],
